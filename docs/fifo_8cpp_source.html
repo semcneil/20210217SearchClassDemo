@@ -115,46 +115,48 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;bufBack = &quot;</span> &lt;&lt; bufBack &lt;&lt; <span class="stringliteral">&quot; stored at &quot;</span> &lt;&lt; &amp;bufBack &lt;&lt; endl;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//            cout &lt;&lt; &quot;buffer stored at &quot; &lt;&lt; buffer &lt;&lt; &quot; is:&quot; &lt;&lt; endl;</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;length = &quot;</span> &lt;&lt; length &lt;&lt; endl;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// print front</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; bufLength; ii++) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(ii == bufFront)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;f&#39;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; bufLength; ii++) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        cout &lt;&lt; buffer[ii] &lt;&lt; <span class="charliteral">&#39;\t&#39;</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; bufLength; ii++) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>(ii == bufBack)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;b&#39;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;==================&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">   94</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a>() {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span>(length);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">  101</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a>() {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span>(bufLength);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">  110</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">myFIFO::getElement</a>(<span class="keywordtype">int</span> ii) {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// check ii for invalid values</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// return the iith element</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span>(buffer[(bufFront + ii) % bufLength]);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    // print front</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    for(int ii = 0; ii &lt; bufLength; ii++) {</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">        if(ii == bufFront)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">            cout &lt;&lt; &#39;f&#39;;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">        cout &lt;&lt; &#39;\t&#39;;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    cout &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    for(int ii = 0; ii &lt; bufLength; ii++) {</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">        cout &lt;&lt; buffer[ii] &lt;&lt; &#39;\t&#39;;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">    cout &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">    for(int ii = 0; ii &lt; bufLength; ii++) {</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">        if(ii == bufBack)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">            cout &lt;&lt; &#39;b&#39;;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">        cout &lt;&lt; &#39;\t&#39;;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    cout &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;==================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">   96</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span>(length);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">  103</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span>(bufLength);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">  112</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">myFIFO::getElement</a>(<span class="keywordtype">int</span> ii) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// check ii for invalid values</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// return the iith element</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span>(buffer[(bufFront + ii) % bufLength]);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmyFIFO_html_a33db4063922715b32b19a228050b5886"><div class="ttname"><a href="classmyFIFO.html#a33db4063922715b32b19a228050b5886">myFIFO::add</a></div><div class="ttdeci">bool add(int x)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00029">fifo.cpp:29</a></div></div>
-<div class="ttc" id="aclassmyFIFO_html_a324d7ec8cfe55042df05a4b063df820e"><div class="ttname"><a href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a></div><div class="ttdeci">int bufLen()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00101">fifo.cpp:101</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a324d7ec8cfe55042df05a4b063df820e"><div class="ttname"><a href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a></div><div class="ttdeci">int bufLen()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00103">fifo.cpp:103</a></div></div>
 <div class="ttc" id="afifo_8h_html"><div class="ttname"><a href="fifo_8h.html">fifo.h</a></div><div class="ttdoc">This is a simple implementation of a FIFO queue.</div></div>
 <div class="ttc" id="aclassmyFIFO_html_ae524804d60b9eb71d2cdb86305695651"><div class="ttname"><a href="classmyFIFO.html#ae524804d60b9eb71d2cdb86305695651">myFIFO::printStats</a></div><div class="ttdeci">void printStats()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00065">fifo.cpp:65</a></div></div>
-<div class="ttc" id="aclassmyFIFO_html_a77f0d093afdb4fa8a6807438b2e265ea"><div class="ttname"><a href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a></div><div class="ttdeci">int lenFull()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00094">fifo.cpp:94</a></div></div>
-<div class="ttc" id="aclassmyFIFO_html_a99f6862fe17d346a7c670e58371d48df"><div class="ttname"><a href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">myFIFO::getElement</a></div><div class="ttdeci">int getElement(int ii)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00110">fifo.cpp:110</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a77f0d093afdb4fa8a6807438b2e265ea"><div class="ttname"><a href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a></div><div class="ttdeci">int lenFull()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00096">fifo.cpp:96</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a99f6862fe17d346a7c670e58371d48df"><div class="ttname"><a href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">myFIFO::getElement</a></div><div class="ttdeci">int getElement(int ii)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00112">fifo.cpp:112</a></div></div>
 <div class="ttc" id="aclassmyFIFO_html_a37c834af7a7f9c6ac27e959e4d1e8701"><div class="ttname"><a href="classmyFIFO.html#a37c834af7a7f9c6ac27e959e4d1e8701">myFIFO::myFIFO</a></div><div class="ttdeci">myFIFO()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00017">fifo.cpp:17</a></div></div>
 <div class="ttc" id="aclassmyFIFO_html_aa6ae7a9785f4ae6708cca589251a88ff"><div class="ttname"><a href="classmyFIFO.html#aa6ae7a9785f4ae6708cca589251a88ff">myFIFO::remove</a></div><div class="ttdeci">int remove()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00048">fifo.cpp:48</a></div></div>
 <!-- start footer part -->

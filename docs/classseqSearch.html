@@ -88,8 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afbcd8067364a0c6412174738397d9370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2549ebc32f39306294597a65a950bdc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseqSearch.html#a2549ebc32f39306294597a65a950bdc5">printStorage</a> ()</td></tr>
 <tr class="separator:a2549ebc32f39306294597a65a950bdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e96b3e1eaa019d3ca5169c813e8280"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseqSearch.html#aa5e96b3e1eaa019d3ca5169c813e8280">search</a> (int searchTerm)</td></tr>
-<tr class="separator:aa5e96b3e1eaa019d3ca5169c813e8280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a86a6f289d16494936f07089cda7b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classseqSearch.html#ab8a86a6f289d16494936f07089cda7b1">search</a> (int searchTerm, int &amp;N)</td></tr>
+<tr class="separator:ab8a86a6f289d16494936f07089cda7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -99,7 +99,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00014">14</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a064a5269de9a70881a50515c6b1a5595"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a064a5269de9a70881a50515c6b1a5595">&#9670;&nbsp;</a></span>seqSearch()</h2>
@@ -125,10 +125,10 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Added a seqSearch instance&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00023">23</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Added a seqSearch instance&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,12 +164,12 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00030">30</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">bufLen</a>(); ii++){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a33db4063922715b32b19a228050b5886">add</a>(start++);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00032">32</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">bufLen</a>(); ii++){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a33db4063922715b32b19a228050b5886">add</a>(start++);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -196,15 +196,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00036">36</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#ae524804d60b9eb71d2cdb86305695651">printStats</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00038">38</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#ae524804d60b9eb71d2cdb86305695651">printStats</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aa5e96b3e1eaa019d3ca5169c813e8280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5e96b3e1eaa019d3ca5169c813e8280">&#9670;&nbsp;</a></span>search()</h2>
+<a id="ab8a86a6f289d16494936f07089cda7b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a86a6f289d16494936f07089cda7b1">&#9670;&nbsp;</a></span>search()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,8 +216,18 @@ Public Attributes</h2></td></tr>
           <td class="memname">int seqSearch::search </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>searchTerm</em></td><td>)</td>
+          <td class="paramname"><em>searchTerm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -229,19 +239,25 @@ Public Attributes</h2></td></tr>
 <p>Searches for the value passed</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">searchTerm</td><td></td></tr>
+    <tr><td class="paramname">searchTerm</td><td>The term to search for </td></tr>
+    <tr><td class="paramname">N</td><td>Returns the number of iterations to find searchTerm (Pass by reference) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the location of searchTerm or -1 if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00046">46</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                               {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">lenFull</a>(); ii++) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span>(-1);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00049">49</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                       {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        N = 0; <span class="comment">// initialize N</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">lenFull</a>(); ii++) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">getElement</a>(ii) == searchTerm) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                N = ii+1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span>(ii);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        N = <a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">lenFull</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span>(-1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -260,7 +276,7 @@ Public Attributes</h2></td></tr>
 
 <p>Variable that stores the array. </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00016">16</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,10 +285,11 @@ Public Attributes</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassmyFIFO_html_a33db4063922715b32b19a228050b5886"><div class="ttname"><a href="classmyFIFO.html#a33db4063922715b32b19a228050b5886">myFIFO::add</a></div><div class="ttdeci">bool add(int x)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00029">fifo.cpp:29</a></div></div>
-<div class="ttc" id="aclassmyFIFO_html_a324d7ec8cfe55042df05a4b063df820e"><div class="ttname"><a href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a></div><div class="ttdeci">int bufLen()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00101">fifo.cpp:101</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a324d7ec8cfe55042df05a4b063df820e"><div class="ttname"><a href="classmyFIFO.html#a324d7ec8cfe55042df05a4b063df820e">myFIFO::bufLen</a></div><div class="ttdeci">int bufLen()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00103">fifo.cpp:103</a></div></div>
 <div class="ttc" id="aclassmyFIFO_html_ae524804d60b9eb71d2cdb86305695651"><div class="ttname"><a href="classmyFIFO.html#ae524804d60b9eb71d2cdb86305695651">myFIFO::printStats</a></div><div class="ttdeci">void printStats()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00065">fifo.cpp:65</a></div></div>
-<div class="ttc" id="aclassmyFIFO_html_a77f0d093afdb4fa8a6807438b2e265ea"><div class="ttname"><a href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a></div><div class="ttdeci">int lenFull()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00094">fifo.cpp:94</a></div></div>
-<div class="ttc" id="aclassseqSearch_html_ab23e04084b81287ff8250c0b27bc2f4d"><div class="ttname"><a href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">seqSearch::storage</a></div><div class="ttdeci">myFIFO storage</div><div class="ttdoc">Variable that stores the array.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a77f0d093afdb4fa8a6807438b2e265ea"><div class="ttname"><a href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a></div><div class="ttdeci">int lenFull()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00096">fifo.cpp:96</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a99f6862fe17d346a7c670e58371d48df"><div class="ttname"><a href="classmyFIFO.html#a99f6862fe17d346a7c670e58371d48df">myFIFO::getElement</a></div><div class="ttdeci">int getElement(int ii)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00112">fifo.cpp:112</a></div></div>
+<div class="ttc" id="aclassseqSearch_html_ab23e04084b81287ff8250c0b27bc2f4d"><div class="ttname"><a href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">seqSearch::storage</a></div><div class="ttdeci">myFIFO storage</div><div class="ttdoc">Variable that stores the array.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

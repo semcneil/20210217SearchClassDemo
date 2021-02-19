@@ -68,6 +68,7 @@ void myFIFO::printStats() {
     cout << "bufBack = " << bufBack << " stored at " << &bufBack << endl;
 //            cout << "buffer stored at " << buffer << " is:" << endl;
     cout << "length = " << length << endl;
+/*
     // print front
     for(int ii = 0; ii < bufLength; ii++) {
         if(ii == bufFront)
@@ -85,6 +86,7 @@ void myFIFO::printStats() {
         cout << '\t';
     }
     cout << endl;
+*/
     cout << "==================" << endl;
 }
 

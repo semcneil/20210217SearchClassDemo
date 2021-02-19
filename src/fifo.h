@@ -60,7 +60,7 @@ class myFIFO {
         int getElement(int ii);
 
     private:
-        static const int bufLength = 5; //!< length of the buffer
+        static const int bufLength = 100000; //!< length of the buffer
         int buffer[bufLength]; //!< Buffer that stores the FIFO data
         int bufFront = 0; //<! Index to front of FIFO where items are removed to next item to remove
         int bufBack = 0; //<! Index to to back of FIFO where items are added to next location to fill

@@ -77,6 +77,8 @@ $(function() {
 <p>This demonstrates header files, separate cpp files, and some searching.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
 <code>#include &quot;<a class="el" href="fifo_8h_source.html">fifo.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
@@ -84,8 +86,10 @@ Include dependency graph for main.cpp:</div>
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#_2home_2drseth_2CPTR227_220210217SearchClassDemo_2src_2main_8cpp" alt=""/></div>
 <map name="_2home_2drseth_2CPTR227_220210217SearchClassDemo_2src_2main_8cpp" id="_2home_2drseth_2CPTR227_220210217SearchClassDemo_2src_2main_8cpp">
 <area shape="rect" title="This demonstrates header files, separate cpp files, and some searching." alt="" coords="5,5,213,61"/>
-<area shape="rect" title=" " alt="" coords="69,184,149,211"/>
-<area shape="rect" href="fifo_8h.html" title="This is a simple implementation of a FIFO queue." alt="" coords="115,109,170,136"/>
+<area shape="rect" title=" " alt="" coords="79,184,159,211"/>
+<area shape="rect" title=" " alt="" coords="31,109,94,136"/>
+<area shape="rect" title=" " alt="" coords="119,109,193,136"/>
+<area shape="rect" href="fifo_8h.html" title="This is a simple implementation of a FIFO queue." alt="" coords="218,109,273,136"/>
 </map>
 </div>
 </div>
@@ -98,6 +102,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab906b66c959b711c80e81a87c481be6c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab906b66c959b711c80e81a87c481be6c">avg1</a> (vector&lt; int &gt; const &amp;v)</td></tr>
+<tr class="separator:ab906b66c959b711c80e81a87c481be6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c3f6775325c30275d11c6abee2db6a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0">main</a> (int, char **)</td></tr>
 <tr class="separator:a2c3f6775325c30275d11c6abee2db6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -108,6 +114,38 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ab906b66c959b711c80e81a87c481be6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab906b66c959b711c80e81a87c481be6c">&#9670;&nbsp;</a></span>avg1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double avg1 </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; int &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate the average value of a integer vector</p>
+<p>This is taken from: <a href="https://stackoverflow.com/a/35833470">https://stackoverflow.com/a/35833470</a> It uses std::accumulate.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>is a integer std::vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The average value of the contents of v </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00073">73</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> 1.0 * accumulate(v.begin(), v.end(), 0LL) / v.size();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2c3f6775325c30275d11c6abee2db6a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c3f6775325c30275d11c6abee2db6a0">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -134,21 +172,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00055">55</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classseqSearch.html">seqSearch</a> s1; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    s1.<a class="code" href="classseqSearch.html#afbcd8067364a0c6412174738397d9370">fillStorage</a>(0);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    s1.<a class="code" href="classseqSearch.html#a2549ebc32f39306294597a65a950bdc5">printStorage</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Search for 1 returns &quot;</span> &lt;&lt; s1.<a class="code" href="classseqSearch.html#aa5e96b3e1eaa019d3ca5169c813e8280">search</a>(1) &lt;&lt; endl;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00077">77</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                      {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classseqSearch.html">seqSearch</a> s1; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> nIterations;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    vector&lt;int&gt; allIters;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    s1.<a class="code" href="classseqSearch.html#afbcd8067364a0c6412174738397d9370">fillStorage</a>(0);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    s1.<a class="code" href="classseqSearch.html#a2549ebc32f39306294597a65a950bdc5">printStorage</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Searching&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii = 0; ii &lt; (s1.<a class="code" href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">storage</a>.<a class="code" href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">lenFull</a>()+1); ii++)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//cout &lt;&lt; &quot;Search for &quot; &lt;&lt; ii &lt;&lt; &quot; returns &quot;;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//cout &lt;&lt; s1.search(ii, nIterations) &lt;&lt; &quot; in &quot; &lt;&lt; nIterations; </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//cout &lt;&lt; &quot; iterations&quot; &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        s1.<a class="code" href="classseqSearch.html#ab8a86a6f289d16494936f07089cda7b1">search</a>(ii, nIterations);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        allIters.push_back(nIterations);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Calculating the average&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;The average number of iterations is &quot;</span> &lt;&lt; <a class="code" href="main_8cpp.html#ab906b66c959b711c80e81a87c481be6c">avg1</a>(allIters) &lt;&lt; endl;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassseqSearch_html_afbcd8067364a0c6412174738397d9370"><div class="ttname"><a href="classseqSearch.html#afbcd8067364a0c6412174738397d9370">seqSearch::fillStorage</a></div><div class="ttdeci">void fillStorage(int start)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00030">main.cpp:30</a></div></div>
-<div class="ttc" id="aclassseqSearch_html"><div class="ttname"><a href="classseqSearch.html">seqSearch</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00014">main.cpp:14</a></div></div>
-<div class="ttc" id="aclassseqSearch_html_aa5e96b3e1eaa019d3ca5169c813e8280"><div class="ttname"><a href="classseqSearch.html#aa5e96b3e1eaa019d3ca5169c813e8280">seqSearch::search</a></div><div class="ttdeci">int search(int searchTerm)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00046">main.cpp:46</a></div></div>
-<div class="ttc" id="aclassseqSearch_html_a2549ebc32f39306294597a65a950bdc5"><div class="ttname"><a href="classseqSearch.html#a2549ebc32f39306294597a65a950bdc5">seqSearch::printStorage</a></div><div class="ttdeci">void printStorage()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00036">main.cpp:36</a></div></div>
+<div class="ttc" id="aclassseqSearch_html_afbcd8067364a0c6412174738397d9370"><div class="ttname"><a href="classseqSearch.html#afbcd8067364a0c6412174738397d9370">seqSearch::fillStorage</a></div><div class="ttdeci">void fillStorage(int start)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00032">main.cpp:32</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ab906b66c959b711c80e81a87c481be6c"><div class="ttname"><a href="main_8cpp.html#ab906b66c959b711c80e81a87c481be6c">avg1</a></div><div class="ttdeci">double avg1(vector&lt; int &gt; const &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00073">main.cpp:73</a></div></div>
+<div class="ttc" id="aclassseqSearch_html"><div class="ttname"><a href="classseqSearch.html">seqSearch</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<div class="ttc" id="aclassmyFIFO_html_a77f0d093afdb4fa8a6807438b2e265ea"><div class="ttname"><a href="classmyFIFO.html#a77f0d093afdb4fa8a6807438b2e265ea">myFIFO::lenFull</a></div><div class="ttdeci">int lenFull()</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8cpp_source.html#l00096">fifo.cpp:96</a></div></div>
+<div class="ttc" id="aclassseqSearch_html_ab8a86a6f289d16494936f07089cda7b1"><div class="ttname"><a href="classseqSearch.html#ab8a86a6f289d16494936f07089cda7b1">seqSearch::search</a></div><div class="ttdeci">int search(int searchTerm, int &amp;N)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00049">main.cpp:49</a></div></div>
+<div class="ttc" id="aclassseqSearch_html_ab23e04084b81287ff8250c0b27bc2f4d"><div class="ttname"><a href="classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d">seqSearch::storage</a></div><div class="ttdeci">myFIFO storage</div><div class="ttdoc">Variable that stores the array.</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="aclassseqSearch_html_a2549ebc32f39306294597a65a950bdc5"><div class="ttname"><a href="classseqSearch.html#a2549ebc32f39306294597a65a950bdc5">seqSearch::printStorage</a></div><div class="ttdeci">void printStorage()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00038">main.cpp:38</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
