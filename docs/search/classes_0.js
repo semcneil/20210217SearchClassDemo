@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['myfifo_17',['myFIFO',['../classmyFIFO.html',1,'']]]
+  ['myfifo_18',['myFIFO',['../classmyFIFO.html',1,'']]],
+  ['mysearch_19',['mySearch',['../classmySearch.html',1,'']]]
 ];

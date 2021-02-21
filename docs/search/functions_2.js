@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fillstorage_25',['fillStorage',['../classseqSearch.html#afbcd8067364a0c6412174738397d9370',1,'seqSearch']]]
+  ['fillstorage_27',['fillStorage',['../classmySearch.html#aaf58e629e8baf5cfe0e4750fe9d44077',1,'mySearch']]]
 ];
