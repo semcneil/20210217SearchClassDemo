@@ -8,6 +8,7 @@ set(DOXYGEN_IN_FILE "Doxyfile.in")
 # Be sure to change the executable name, 
 # and change the input file name if it is different.
 add_executable(search ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/fifo.cpp)
+add_executable(hash ${PROJECT_SOURCE_DIR}/myHashing.cpp)
 
 include(CTest)
 enable_testing()

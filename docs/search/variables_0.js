@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['storage_35',['storage',['../classseqSearch.html#ab23e04084b81287ff8250c0b27bc2f4d',1,'seqSearch']]]
+  ['lenstorage_45',['lenStorage',['../classmyHashSearch.html#aaa05c154a8c050804a26e622258bcaf3',1,'myHashSearch']]]
 ];

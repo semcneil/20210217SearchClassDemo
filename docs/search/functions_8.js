@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['search_33',['search',['../classseqSearch.html#ab8a86a6f289d16494936f07089cda7b1',1,'seqSearch']]],
-  ['seqsearch_34',['seqSearch',['../classseqSearch.html#a064a5269de9a70881a50515c6b1a5595',1,'seqSearch']]]
+  ['search_43',['search',['../classmyHashSearch.html#a6a810694211a96f1f5c9b1ecf355a88b',1,'myHashSearch']]],
+  ['seqsearch_44',['seqSearch',['../classmySearch.html#af498a564afb3e21f9b40a0a202330052',1,'mySearch']]]
 ];
