@@ -51,11 +51,13 @@ public:
      * prints the contents of storage (beware of calling on large values)
      */
     void printStorage(){
-        if(lenStorage < 100) {
+        if(lenStorage < 10) {
             for(int ii = 0; ii < lenStorage; ii++) {
                 cout << storage.at(ii) << '\t';
             }
             cout << endl;
+        } else {
+            cout << "Too long to display" << endl;
         }
     }
 
